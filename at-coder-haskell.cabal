@@ -1,0 +1,34 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: ae43976f5481d4efc711c23b8b870564b89bd90b66b19083a426626124bed2af
+
+name:           at-coder-haskell
+version:        0.0.0
+build-type:     Simple
+
+test-suite doctest
+  type: exitcode-stdio-1.0
+  main-is: test/doctests.hs
+  other-modules:
+      Paths_at_coder_haskell
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      doctest
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_at_coder_haskell
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , hspec
+  default-language: Haskell2010
