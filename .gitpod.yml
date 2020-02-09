@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: stack update && eval "$(stack --bash-completion-script stack)" && export PATH=~/.local/bin:$PATH
+  - init: stack update && stack setup && eval "$(stack --bash-completion-script stack)" && export PATH=~/.local/bin:$PATH
 
 vscode:
   extensions:
